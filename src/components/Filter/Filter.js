@@ -78,13 +78,6 @@ const Filter = () => {
       </select>
       {news.map((article) => (
         <div className="header">
-          <div className="header__data">
-            <p className="header__public">{article.author}</p>
-            <p className="header__public">
-              {" "}
-              {moment(article.publishedAt).format("MMMM Do YYYY, h:mm:ss a")}
-            </p>
-          </div>
           <a
             className="header__link"
             href={article.url}
@@ -93,6 +86,13 @@ const Filter = () => {
           >
             <h2 className="header__title">{article.title}</h2>
           </a>
+          <div className="header__data">
+            <p className="header__public">{article.author}</p>
+            <p className="header__public">
+              {" "}
+              {moment(article.publishedAt).format("MMMM Do YYYY, h:mm:ss a")}
+            </p>
+          </div>
         </div>
       ))}
     </>
