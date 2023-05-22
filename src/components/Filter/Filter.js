@@ -43,7 +43,7 @@ const Filter = () => {
       }
     };
     fetchNews();
-  }, [country, category]);
+  }, [apiUrl, country, setNews]);
 
   const handleChangeCountry = (e) => {
     setCountry(e.target.value);
